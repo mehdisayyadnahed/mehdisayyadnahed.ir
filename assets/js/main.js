@@ -7,7 +7,7 @@
     if (savedLang === 'fa') {
         document.title = "مهدی صیاد | رشد دیجیتال کسب و کار";
     } else {
-        document.title = "Mehdi Sayyad | Digital Business Growth Engineer";
+        document.title = "Mehdi Sayyad | Digital Business Growth";
     }
 
     // ۲. هماهنگ‌سازی آنی تم سیستمی یا ذخیره‌شده (قبل از رندر نهایی بدنه)
