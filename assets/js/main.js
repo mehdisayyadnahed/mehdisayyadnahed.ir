@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // بروزرسانی عنوان پنجره مرورگر
         if (lang === 'fa') {
-            document.title = "مهدی صیاد | مهندس رشد دیجیتال کسب و کار";
+            document.title = "مهدی صیاد | رشد دیجیتال کسب و کار";
         } else {
-            document.title = "Mehdi Sayyad | Digital Business Growth Engineer";
+            document.title = "Mehdi Sayyad | Digital Business Growth";
         }
 
         // مدیریت چرخش آیکون تغییر زبان به شکل داینامیک بدون تداخل کلاس‌ها
