@@ -5,7 +5,7 @@
     document.documentElement.setAttribute('lang', savedLang);
     document.documentElement.setAttribute('dir', savedLang === 'fa' ? 'rtl' : 'ltr');
     if (savedLang === 'fa') {
-        document.title = "مهدی صیاد | مهندس رشد دیجیتال کسب و کار";
+        document.title = "مهدی صیاد | رشد دیجیتال کسب و کار";
     } else {
         document.title = "Mehdi Sayyad | Digital Business Growth Engineer";
     }
