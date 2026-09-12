@@ -1295,6 +1295,7 @@ ul {
         display: none;
     }
     .mobile-menu-btn {
+        margin-top: 7px;
         display: block;
     }
 
