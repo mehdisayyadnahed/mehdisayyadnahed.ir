@@ -5,9 +5,9 @@
     document.documentElement.setAttribute('lang', savedLang);
     document.documentElement.setAttribute('dir', savedLang === 'fa' ? 'rtl' : 'ltr');
     if (savedLang === 'fa') {
-        document.title = "مهدی صیاد | رشد دیجیتال کسب و کار";
+        document.title = "مهدی صیاد | مهندس رشد دیجیتال کسب و کار";
     } else {
-        document.title = "Mehdi Sayyad | Digital Business Growth";
+        document.title = "Mehdi Sayyad | Digital Business Growth Engineer";
     }
 
     // ۲. هماهنگ‌سازی آنی تم سیستمی یا ذخیره‌شده (قبل از رندر نهایی بدنه)
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // بروزرسانی عنوان پنجره مرورگر
         if (lang === 'fa') {
-            document.title = "مهدی صیاد | رشد دیجیتال کسب و کار";
+            document.title = "مهدی صیاد | مهندس رشد دیجیتال کسب و کار";
         } else {
-            document.title = "Mehdi Sayyad | Digital Business Growth";
+            document.title = "Mehdi Sayyad | Digital Business Growth Engineer";
         }
 
         // مدیریت چرخش آیکون تغییر زبان به شکل داینامیک بدون تداخل کلاس‌ها
