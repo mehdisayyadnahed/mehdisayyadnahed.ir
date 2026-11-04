@@ -538,6 +538,7 @@ ul {
     border: 1px solid rgba(48, 188, 201, 0.35);
     color: var(--accent-2);
     font-size: 0.85rem;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
