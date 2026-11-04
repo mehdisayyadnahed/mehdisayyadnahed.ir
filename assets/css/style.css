@@ -10,13 +10,13 @@
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --border-color: rgba(15, 23, 42, 0.1);
-    
+
     /* Brand Colors (AI Vibe: Cyan & Purple) */
     --accent-1: #04c37f;
     --accent-2: #30bcc9;
     --accent-3: #ec4899;
     --gradient-brand: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-    
+
     --glow-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
     --box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
@@ -29,11 +29,11 @@
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --border-color: rgba(255, 255, 255, 0.08);
-    
+
     --accent-1: #04c37f;
     --accent-2: #30bcc9;
     --gradient-brand: linear-gradient(135deg, #30bcc9, #12b880, #04c37f);
-    
+
     --glow-shadow: 0 0 30px rgba(79, 172, 254, 0.4);
     --box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
@@ -111,6 +111,10 @@ ul {
     font-size: 0.9rem;
 }
 
+.text-sm {
+    font-size: 0.85em;
+}
+
 .mb-4 {
     margin-bottom: 1.5rem;
 }
@@ -168,7 +172,7 @@ ul {
 /* =========================================
    Custom Cursor
    ========================================= */
-.cursor-dot, 
+.cursor-dot,
 .cursor-outline {
     position: fixed;
     top: 0;
@@ -258,25 +262,40 @@ ul {
 }
 
 .theme-btn {
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
     color: var(--text-primary);
     font-size: 1.2rem;
     padding: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
     cursor: pointer;
     font-family: none;
     line-height: 1.2;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: var(--accent-1);
+    color: #fff;
+    transform: translateY(-3px);
 }
 
 .mobile-menu-btn {
     display: none;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     color: var(--text-primary);
     font-size: 1.5rem;
+    line-height: 1;
+    padding: 0;
     cursor: pointer;
+}
+
+.mobile-menu-btn i {
+    display: block;
+    line-height: 1;
 }
 
 /* Mobile Menu */
@@ -445,6 +464,14 @@ ul {
     transform: translateY(-3px) scale(1.02);
 }
 
+/* تراز فلش دکمه‌ی اصلی با متن */
+.btn-large > span.lang-fa,
+.btn-large > span.lang-en {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
 /* =========================================
    Hero Section
    ========================================= */
@@ -507,8 +534,8 @@ ul {
     gap: 10px;
     padding: 8px 16px;
     border-radius: 20px;
-    background: rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: rgba(48, 188, 201, 0.12);
+    border: 1px solid rgba(48, 188, 201, 0.35);
     color: var(--accent-2);
     font-size: 0.85rem;
     margin-bottom: 20px;
@@ -570,6 +597,7 @@ ul {
     border-radius: 6px;
     color: var(--accent-1);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .hero-buttons {
@@ -667,7 +695,7 @@ ul {
 }
 
 /* =========================================
-   Bento Box 
+   Bento Box
    ========================================= */
 .bento-grid {
     display: grid;
@@ -751,11 +779,6 @@ ul {
     line-height: 1;
 }
 
-.map-box {
-    padding: 0;
-    background: url('https://via.placeholder.com/600x300/1e293b/334155?text=Map') center/cover;
-}
-
 .map-overlay {
     position: absolute;
     bottom: 0;
@@ -769,7 +792,7 @@ ul {
 }
 
 /* =========================================
-   Services Section (NEW)
+   Services Section
    ========================================= */
 .services-grid {
     display: grid;
@@ -814,7 +837,7 @@ ul {
 }
 
 /* =========================================
-   Skills Section (NEW)
+   Skills Section
    ========================================= */
 .skills-wrapper {
     display: grid;
@@ -1094,7 +1117,7 @@ ul {
 }
 
 /* =========================================
-   Testimonials (NEW)
+   Testimonials
    ========================================= */
 .testimonials-grid {
     display: grid;
@@ -1191,7 +1214,7 @@ ul {
     margin-bottom: 30px;
 }
 
-.input-container input, 
+.input-container input,
 .input-container textarea {
     width: 100%;
     background: transparent;
@@ -1213,14 +1236,14 @@ ul {
     transition: all 0.3s;
 }
 
-.input-container input:focus, 
+.input-container input:focus,
 .input-container textarea:focus {
     border-bottom-color: var(--accent-1);
 }
 
-.input-container input:focus ~ label, 
+.input-container input:focus ~ label,
 .input-container input:not(:placeholder-shown) ~ label,
-.input-container textarea:focus ~ label, 
+.input-container textarea:focus ~ label,
 .input-container textarea:not(:placeholder-shown) ~ label {
     top: -10px;
     font-size: 0.8rem;
@@ -1265,7 +1288,7 @@ ul {
     .bento-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .bento-large, 
+    .bento-large,
     .bento-medium {
         grid-column: span 2;
     }
@@ -1281,7 +1304,7 @@ ul {
     .section {
         padding: 80px 0;
     }
-    
+
     /* Strict Header Fix for Mobile */
     .header {
         width: calc(100% - 30px);
@@ -1290,12 +1313,12 @@ ul {
     .nav-container {
         padding: 0 15px;
     }
-    .nav-links, 
+    .nav-links,
     .hidden-mobile {
         display: none;
     }
     .mobile-menu-btn {
-        display: block;
+        display: flex;
     }
 
     .logo {
@@ -1304,7 +1327,7 @@ ul {
     .theme-btn {
         font-size: 1rem;
     }
-    
+
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -1323,16 +1346,16 @@ ul {
     .bio {
         margin: 0 auto 40px auto;
     }
-    
+
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .bento-large, 
-    .bento-medium, 
+    .bento-large,
+    .bento-medium,
     .edu-box {
         grid-column: span 2;
     }
-    
+
     .skills-wrapper {
         grid-template-columns: 1fr;
         padding: 30px;
@@ -1342,7 +1365,7 @@ ul {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .huge-text, 
+    .huge-text,
     .name {
         font-size: 2.6rem;
     }
@@ -1360,27 +1383,27 @@ ul {
         width: 300px;
         height: 300px;
     }
-    
-    .bento-grid, 
-    .services-grid, 
-    .modern-projects-grid, 
+
+    .bento-grid,
+    .services-grid,
+    .modern-projects-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
-    .bento-large, 
-    .bento-medium, 
-    .bento-small, 
+    .bento-large,
+    .bento-medium,
+    .bento-small,
     .edu-box {
         grid-column: span 1;
     }
-    
+
     .timeline {
         padding-right: 20px;
     }
     .timeline-item {
         padding-right: 30px;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 20px;
@@ -1440,7 +1463,7 @@ ul {
 ─────────────────────────────────────── */
 .bento-icon {
     font-size: 2.5rem;
-    background: var(--gradient-primary);
+    background: var(--gradient-brand);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1660,7 +1683,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
@@ -1768,7 +1791,7 @@ ul {
 }
 
 /* =========================================
-   Fixes & New Sections (Added by Assistant)
+   Fixes & New Sections
    ========================================= */
 .timeline-content {
     width: 100%;
@@ -1828,11 +1851,13 @@ ul {
     flex-wrap: wrap;
 }
 
+/* کپسول‌های تاریخ: هم‌رنگ با کپسول «در دسترس...» */
 .pub-meta span {
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(48, 188, 201, 0.12);
     padding: 4px 12px;
     border-radius: 20px;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(48, 188, 201, 0.35);
+    color: var(--accent-2);
 }
 
 .pub-desc {
@@ -1902,7 +1927,7 @@ body:not([data-theme="dark"]) .cv-viewport {
 }
 
 body:not([data-theme="dark"]) .cv-grid {
-    background-image: 
+    background-image:
         linear-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px),
         linear-gradient(90deg, rgba(59, 130, 246, 0.15) 1px, transparent 1px) !important;
 }
@@ -1939,8 +1964,8 @@ body:not([data-theme="dark"]) #vector-container {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
-    overflow-y: auto; 
-    overscroll-behavior: contain; 
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .custom-modal-overlay.active {
@@ -2044,13 +2069,17 @@ html[lang="en"] .lang-fa {
     display: none !important;
 }
 
+.stat-number .lang-fa {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
 /* اصلاح تراز دکمه بستن پاپ‌آپ‌ها در زبان انگلیسی (چپ‌چین) */
 [dir="ltr"] .custom-modal-close {
     left: auto !important;
     right: 20px !important;
 }
 
-/* رفع افکت هاله، بوردر تکراری و تداخل پس‌زمینه در تگ‌های span تو در تو (مانند تگ‌های ابزارها و تاریخ‌ها) */
+/* رفع افکت هاله، بوردر تکراری و تداخل پس‌زمینه در تگ‌های span تو در تو */
 span.lang-fa, span.lang-en {
     background: none !important;
     border: none !important;
